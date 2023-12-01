@@ -2,10 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-
+import { AccountsService } from './services/account.service';
 import { AppComponent } from './app.component';
 import { AccountComponent } from './components/account/account.component';
 import { NewAccountComponent } from './components/new-account/new-account.component';
+import { LoggingService } from './services/logging.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { NewAccountComponent } from './components/new-account/new-account.compon
     BrowserModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [AccountsService, LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
